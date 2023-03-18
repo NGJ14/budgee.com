@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>budgee</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="./logo.png">
+    <link rel="manifest" href="3a-manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <div class="incExpBox">
+        <div class="incBox">
+            <div id="incomeTxt">INCOME</div>
+            <div id="incomeAmt">&#8377;0.00</div>
+        </div>
+        <div class="expBox">
+            <div id="expenseTxt">EXPENSE</div>
+            <div id="expenseAmt">&#8377;0.00</div>
+        </div>
+    </div>
+
+    <div class="balBoxContainer">
+        <div class="balBox">
+            <div id="balanceTxt">BALANCE</div>
+            <div id="balanceAmt">&#8377;0.00</div>
+        </div>
+    </div>
+
+    <div id="container"></div>
+
+
+    <div id="entries">
+        <div id="dummy" onclick="bg.toggle(true)">NEW ENTRY</div>
+        <div id="list"></div>
+    </div>
+
+    <div id="form">
+        <form onsubmit="return bg.save()">
+            <div id="formEnd" onclick="bg.toggle(false)">&#9587;</div>
+            <input type="hidden" id="formID">
+            <select id="formSign" required>
+                <option value="+">I N C O M E</option>
+                <option value="-">E X P E N S E</option>
+            </select>
+            <input type="text" placeholder="D E S C R I P T I O N" id="formTxt" required>
+            <input type="number" id="formAmt" placeholder="A M O U N T" step="0.01" required>
+            <input type="submit" value="S A V E" id="formGo">
+        </form>
+    </div>
+    
+
+    <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/1.0.0/dist/progressbar.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

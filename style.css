@@ -1,0 +1,257 @@
+body {
+    font-family: sans-serif;
+    background: #000;
+}
+
+#container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin: 40px 0;
+}
+
+svg {
+    height: 120px;
+    width: 200px;
+    fill: none;
+    stroke: cyan;
+    stroke-width: 10;
+    stroke-linecap: round;
+    -webkit-filter: drop-shadow(-3px -2px 5px rgb(64, 64, 64));
+    filter: drop-shadow(-3px -2px 5px rgb(59, 59, 59));
+}
+
+
+.incExpBox{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 2.8rem 0 0 0;
+}
+.incBox, .expBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 32vw;
+    padding: 0.5rem 1rem;
+    border-radius:12px;
+    box-shadow:  0px 2px 5px -1px;
+}
+.balBoxContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.balBox{
+    width: 60vw;
+    margin: 2.8rem 0 0 0;
+    box-shadow: 0px 2px 5px -1px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+}
+#incomeAmt, #expenseAmt, #balanceAmt{
+    font-size: 2.1rem;
+}
+#incomeTxt, #expenseTxt, #balanceTxt {
+    color: white;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+}
+#incomeAmt::first-letter ,#expenseAmt::first-letter, #balanceAmt::first-letter {
+    font-size: 75%;
+}
+#incomeAmt::first-letter,
+#expenseAmt::first-letter,
+#balanceAmt::first-letter {
+    font-size: 75%;
+}
+.incBox{
+    color: rgb(191, 236, 124);
+    
+}
+.expBox{
+    color: rgb(221, 117, 117);
+}
+.balBox{
+    color: rgb(247, 247, 141);
+}
+
+
+
+
+
+
+
+
+#entries {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#dummy,
+.eDel,
+.eEdit {
+    cursor: pointer;
+}
+
+#dummy,
+.entry {
+    border-radius: 15px;
+    margin: 15px 0px;
+    padding: 20px 10px;
+}
+
+#dummy {
+    font-weight: 700;
+    color: #959595;
+    display: flex;
+    /* width: 50vw; */
+    margin: 10px 0px;
+    padding: 18px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    border: 3px dashed #d3d3d3;
+    /* width: 50vw; */
+}
+
+
+.entry {
+    display: flex;
+    background: #282828;
+    align-items: center;
+    font-size: 18px;
+    width: 85vw;
+}
+
+.eDel,
+.eTxt,
+.eAmt,
+.eEdit {
+    padding: 0 10px;
+}
+
+.eDel,
+.eAmt,
+.eEdit {
+    font-weight: 700;
+}
+
+.eDel {
+    color: #d72f2f;
+}
+
+.eTxt {
+    flex-grow: 1;
+}
+
+.eEdit,
+.income .eTxt,
+.expense .eTxt {
+    color: #e1e1e1;
+}
+
+.income .eAmt {
+    color: rgb(191, 236, 124);
+}
+
+.expense .eAmt {
+    color: rgb(221, 117, 117);
+}
+
+#form {
+    position: fixed;
+    top: 5vh;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#form.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+#form form {
+    width: 75vw;
+    padding: 50px 20px;
+    border-radius: 10px;
+    background: #4c4c4c;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#formEnd,
+#formGo {
+    cursor: pointer;
+}
+
+#formEnd {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    font-weight: 700;
+    color: #fff;
+    background: rgb(221, 117, 117);
+}
+
+#formSign{
+    width: 72vw;
+}
+
+#form label,
+#form input{
+    display: block;
+    width: 65vw;
+    border: none;
+}
+
+#form label {
+    margin: 10px 0;
+    color: #b3b3b3;
+}
+
+#form input,
+#form select {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+#formGo {
+    margin: 20px 0 0 0;
+
+    border: 0;
+    color: #000;
+    background: rgb(247, 247, 141);
+}
+
+select{
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;
+    -webkit-appearance: none;
+    background-position-x: 66vw;
+}
