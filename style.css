@@ -54,6 +54,7 @@ svg {
     border-radius: 12px;
     justify-content: center;
     align-items: center;
+    padding-top: 0.5rem;
 }
 #incomeAmt, #expenseAmt, #balanceAmt{
     font-size: 2.1rem;
