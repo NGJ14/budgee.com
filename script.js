@@ -36,7 +36,7 @@ var bg = {
   toggle: (id) => {
     if (id === false) {
       bg.fID.value = "";
-      bg.fSign.value = "+";
+      bg.fSign.value = "-";
       bg.fTxt.value = "";
       bg.fAmt.value = "";
       bg.hForm.classList.remove("show");
@@ -67,7 +67,7 @@ var bg = {
         bal -= entry.a;
       }
       row = document.createElement("div");
-      row.className = `entry ${entry.s == "+" ? "income" : "expense"}`;
+      row.className = `entry ${entry.s == "-" ? "expense" : "income"}`;
       row.innerHTML = `<div class="eDel" onclick="bg.del(${i})"><i class="fa-regular fa-trash-can"></i></div>
       <div class="eTxt">${entry.t}</div>
       <div class="eAmt">&#8377;${parseFloat(entry.a).toFixed(2)}</div>
