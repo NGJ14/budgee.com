@@ -24,65 +24,6 @@ svg {
 }
 
 
-.incExpBox{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    margin: 2.8rem 0 0 0;
-}
-.incBox, .expBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 32vw;
-    padding: 0.5rem 1rem;
-    border-radius:12px;
-    box-shadow:  0px 2px 5px -1px;
-}
-.balBoxContainer{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-.balBox{
-    width: 60vw;
-    margin: 2.8rem 0 0 0;
-    box-shadow: 0px 2px 5px -1px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 12px;
-    justify-content: center;
-    align-items: center;
-    padding-top: 0.5rem;
-}
-#incomeAmt, #expenseAmt, #balanceAmt{
-    font-size: 2.1rem;
-}
-#incomeTxt, #expenseTxt, #balanceTxt {
-    color: white;
-    letter-spacing: 3px;
-    font-size: 0.9rem;
-}
-#incomeAmt::first-letter ,#expenseAmt::first-letter, #balanceAmt::first-letter {
-    font-size: 75%;
-}
-#incomeAmt::first-letter,
-#expenseAmt::first-letter,
-#balanceAmt::first-letter {
-    font-size: 75%;
-}
-.incBox{
-    color: rgb(191, 236, 124);
-    
-}
-.expBox{
-    color: rgb(221, 117, 117);
-}
-.balBox{
-    color: rgb(247, 247, 141);
-}
-
 
 
 
@@ -112,18 +53,18 @@ svg {
 }
 
 #dummy {
-    font-weight: 700;
-    color: #959595;
+    position: absolute;
+    bottom: 50px;
+    font-weight: 100;
+    color: #111;
+    background: white;
     display: flex;
-    /* width: 50vw; */
-    margin: 10px 0px;
-    padding: 18px;
+    padding: 0 27px;
     justify-content: center;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 6rem;
     letter-spacing: 3px;
-    border: 3px dashed #d3d3d3;
-    /* width: 50vw; */
+    border-radius: 50%;
 }
 
 
@@ -220,15 +161,16 @@ svg {
     background: rgb(221, 117, 117);
 }
 
-#formSign{
+#formSign {
     width: 72vw;
 }
 
 #form label,
-#form input{
+#form input {
     display: block;
     width: 65vw;
     border: none;
+    text-align: center;
 }
 
 #form label {
@@ -242,6 +184,9 @@ svg {
     margin: 10px 0;
     border-radius: 8px;
 }
+#form select{
+    display: none;
+}
 
 #formGo {
     margin: 20px 0 0 0;
@@ -251,7 +196,7 @@ svg {
     background: rgb(247, 247, 141);
 }
 
-select{
+select {
     background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;
     -webkit-appearance: none;
     background-position-x: 66vw;
